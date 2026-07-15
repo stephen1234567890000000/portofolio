@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Project from "@/components/Project";
 import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <Experience />
       <Project />
+      <Contact />
       {/* Komponen-komponen kita akan ditaruh di sini nanti */}
       <p className="text-center pt-20 text-2xl font-bold">
         My Portfolio Is Under Construction 🚀
