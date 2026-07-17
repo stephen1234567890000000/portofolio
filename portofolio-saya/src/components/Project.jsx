@@ -175,26 +175,25 @@ export default function Project() {
       id="project"
       className="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800"
     >
-      <div className="mb-12 text-center md:text-left">
-        <h2 className="text-3xl font-bold text-teal-400 mb-2">
+      <div className="mb-12 text-center md:text-left section-ink">
+        <h2 className="text-3xl md:text-4xl font-black text-red-300 mb-2 uppercase tracking-[0.16em] section-heading">
           Selected Projects
         </h2>
-        <p className="text-slate-400">
+        <p className="text-slate-400 max-w-2xl leading-relaxed">
           Showcasing my best work that demonstrates my technical execution
           skills.
         </p>
       </div>
 
-      {/* Card layout without images (focus on typography and spacing) */}
-      <div className="space-y-12">
+      <div className="space-y-14">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="glass p-10 rounded-3xl border border-slate-800 hover-glow transition-all duration-300 shadow-2xl animate-fade-up"
+            className="glass chaos-card p-10 rounded-3xl border border-red-800/40 hover-glow transition-all duration-300 shadow-2xl animate-fade-up"
           >
             {/* Top section: Project title & button */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-              <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-teal-500/10 text-teal-400 px-2 py-0.5 rounded border border-teal-500/20 mb-2">
+              <span className="inline-block text-[10px] font-bold tracking-widest uppercase chaos-badge text-red-200 px-2 py-0.5 rounded border border-red-500/20 mb-2">
                 {project.type}
               </span>
               <h3 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight">
@@ -212,6 +211,7 @@ export default function Project() {
 
             {/* Second section: Tech stack badges */}
             <div className="flex flex-wrap gap-3 mb-8">
+              <span className="absolute -top-6 left-0 text-xs uppercase tracking-[0.3em] text-red-500/80">chaos UI</span>
               {project.tech.map((t, idx) => {
                 const techName = typeof t === "string" ? t : t.name;
                 const techIcon =
@@ -220,7 +220,7 @@ export default function Project() {
                 return (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-2 bg-slate-800/70 text-teal-300 text-sm px-4 py-1.5 rounded-full border border-slate-700/50 font-semibold"
+                    className="inline-flex items-center gap-2 bg-[#130101]/80 text-red-200 text-sm px-4 py-1.5 rounded-full border border-red-700/30 font-semibold"
                   >
                     {techIcon}
                     {techName}
@@ -232,19 +232,19 @@ export default function Project() {
             {/* Third section: Structured narrative for HR readability */}
             <div className="space-y-4 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
               <div>
-                <span className="text-xs font-bold text-teal-400 tracking-wider uppercase block mb-1">
+                <span className="text-xs font-bold text-red-300 tracking-wider uppercase block mb-1">
                   Background & Problem
                 </span>
                 <p className="text-slate-300">{project.background}</p>
               </div>
               <div>
-                <span className="text-xs font-bold text-teal-400 tracking-wider uppercase block mb-1">
+                <span className="text-xs font-bold text-red-300 tracking-wider uppercase block mb-1">
                   Method & Strategy
                 </span>
                 <p className="text-slate-300">{project.strategy}</p>
               </div>
               <div>
-                <span className="text-xs font-bold text-teal-400 tracking-wider uppercase block mb-1">
+                <span className="text-xs font-bold text-red-300 tracking-wider uppercase block mb-1">
                   Result & Output
                 </span>
                 <p className="text-slate-300">{project.result}</p>

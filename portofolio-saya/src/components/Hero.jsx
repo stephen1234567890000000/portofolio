@@ -2,18 +2,19 @@ import SectionReveal from "./SectionReveal";
 
 export default function Hero() {
   return (
-    <SectionReveal id="home" className="flex flex-col items-center justify-center text-center py-24 px-6 md:py-32">
-      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
-        Stephen Joshua Manullang
+    <SectionReveal id="home" className="relative overflow-hidden flex flex-col items-center justify-center text-center py-24 px-6 md:py-32">
+      <div className="hero-deco"></div>
+      <h1 className="relative text-5xl md:text-7xl font-black tracking-[0.18em] mb-4 text-red-300 glitch-text section-heading" data-text="Stephen Joshua">
+        Stephen Joshua
       </h1>
-      <p className="text-lg md:text-xl lead max-w-2xl mb-8">
-        Full Stack Software Engineer
+      <p className="text-lg md:text-2xl max-w-3xl mb-10 text-slate-300 chaos-subtitle leading-relaxed">
+        Full Stack Software Engineer — dark, bold, and chaotic digital experiences built for attention and impact.
       </p>
-      <div className="flex gap-4">
-        <a href="#project" className="bg-teal-500 hover:bg-teal-600 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">
-          View My Projects
+      <div className="flex flex-wrap justify-center gap-4">
+        <a href="#project" className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-red-500/20 tracking-[0.08em] uppercase">
+          View Projects
         </a>
-        <a href="#contact" className="border border-slate-700 hover:border-slate-500 text-slate-300 px-6 py-3 rounded-lg transition">
+        <a href="#contact" className="border border-red-700 hover:border-red-500 text-red-200 px-6 py-3 rounded-full transition tracking-[0.08em] uppercase">
           Contact Me
         </a>
       </div>

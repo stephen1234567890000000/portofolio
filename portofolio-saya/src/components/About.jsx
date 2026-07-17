@@ -72,14 +72,14 @@ export default function About() {
       id="about"
       className="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800"
     >
-      <h2 className="text-3xl font-bold mb-6 text-teal-400">About Me</h2>
+      <h2 className="text-4xl md:text-5xl font-black mb-6 text-red-300 uppercase tracking-[0.25em] section-heading section-ink">About Me</h2>
 
       <div className="flex flex-col gap-10">
-        <div className="text-slate-300 space-y-4 text-base leading-relaxed">
+        <div className="text-slate-300 space-y-5 text-base leading-relaxed">
           <p>
             I am a Full Stack JavaScript Developer with hands-on experience
-            gained through the RevoU Full Stack JavaScript Immersive Program. I
-            believe software should not only work correctly but also be
+            gained through the RevoU Full Stack JavaScript Immersive Program.
+            I believe software should not only work correctly but also be
             maintainable, scalable, and provide a smooth user experience.
           </p>
           <p>
@@ -91,19 +91,18 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-slate-800/60 pt-8 animate-fade-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-slate-800/60 pt-10 animate-fade-up">
           {/* Kolom Kiri: Technical Skills */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-slate-200">
+            <h3 className="text-2xl font-black mb-4 text-red-300 uppercase tracking-[0.2em] section-heading">
               Technical Skills
             </h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="flex items-center gap-2 bg-slate-800/60 text-slate-200 text-xs font-medium px-3 py-2 rounded-xl border border-slate-700/50 hover:border-teal-500/30 transition duration-200"
+                  className="flex items-center gap-2 bg-[#120202]/80 text-slate-200 text-[0.8rem] font-semibold px-3 py-2 rounded-2xl border border-red-700/30 hover:border-red-400/30 transition duration-200"
                 >
-                  {/* Langsung merender komponen ikon lokal tanpa tag <img> */}
                   {skill.icon}
                   {skill.name}
                 </span>
@@ -113,14 +112,14 @@ export default function About() {
 
           {/* Kolom Kanan: Soft Skills */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-slate-200 flex items-center gap-2">
+            <h3 className="text-2xl font-black mb-4 text-red-300 uppercase tracking-[0.2em] section-heading">
               Soft Skills
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {softSkills.map((skill, idx) => (
                 <span
                   key={idx}
-                  className="bg-slate-900 text-amber-300 text-xs font-medium px-3 py-2 rounded-xl border border-slate-800/80 leading-relaxed"
+                  className="bg-slate-900 text-amber-300 text-[0.8rem] font-semibold px-3 py-2 rounded-2xl border border-slate-800/80 leading-relaxed"
                 >
                   {skill}
                 </span>

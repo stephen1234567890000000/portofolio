@@ -34,26 +34,24 @@ export default function Experience() {
       className="py-20 px-6 max-w-3xl mx-auto border-t border-slate-800"
     >
       {/* 💼 BAGIAN 1: WORK EXPERIENCE */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-teal-400 mb-8 flex items-center gap-2">
+      <div className="mb-16 section-ink">
+        <h2 className="text-3xl md:text-4xl font-black text-red-300 mb-10 uppercase tracking-[0.18em] section-heading">
           Working Experience
         </h2>
-        <div className="border-l-2 border-slate-800 pl-6 ml-3 space-y-10">
+        <div className="border-l-2 border-slate-800 pl-6 ml-3 space-y-12">
           {workExperiences.map((exp, idx) => (
             <div key={idx} className="relative group">
-              {/* Lingkaran Garis Waktu */}
-              <div className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 border-2 border-teal-500 group-hover:bg-teal-400 transition-all duration-300" />
+              <div className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 border-2 border-red-500 group-hover:bg-red-400 transition-all duration-300" />
 
-              {/* Konten Teks berada di luar lingkaran */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 className="text-lg font-bold text-slate-100 group-hover:text-teal-400 transition duration-300">
+                <h3 className="text-xl font-black text-slate-100 group-hover:text-red-300 transition duration-300">
                   {exp.role}
                 </h3>
                 <span className="text-xs text-slate-500 font-medium sm:text-right">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-sm text-teal-300/90 font-medium mb-3">
+              <p className="text-sm text-red-300/90 font-semibold mb-3">
                 {exp.company}
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
@@ -64,20 +62,17 @@ export default function Experience() {
         </div>
       </div>
 
-      {/* 🎓 BAGIAN 2: EDUCATION */}
-      <div>
-        <h2 className="text-2xl font-bold text-teal-400 mb-8 flex items-center gap-2">
+      <div className="section-ink">
+        <h2 className="text-3xl md:text-4xl font-black text-red-300 mb-10 uppercase tracking-[0.18em] section-heading">
           Education
         </h2>
-        <div className="border-l-2 border-slate-800 pl-6 ml-3 space-y-10">
+        <div className="border-l-2 border-slate-800 pl-6 ml-3 space-y-12">
           {education.map((edu, idx) => (
             <div key={idx} className="relative group">
-              {/* Lingkaran Garis Waktu */}
-              <div className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 border-2 border-teal-500 group-hover:bg-teal-400 transition-all duration-300" />
+              <div className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 border-2 border-red-500 group-hover:bg-red-400 transition-all duration-300" />
 
-              {/* Konten Teks berada di luar lingkaran */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-                <h3 className="text-lg font-bold text-slate-100 group-hover:text-teal-400 transition duration-300">
+                <h3 className="text-xl font-black text-slate-100 group-hover:text-red-300 transition duration-300">
                   {edu.degree}
                 </h3>
                 <span className="text-xs text-slate-500 font-medium sm:text-right">
@@ -87,7 +82,7 @@ export default function Experience() {
               <p className="text-sm text-slate-400 font-medium mb-2">
                 {edu.institute}
               </p>
-              <p className="text-slate-500 text-xs leading-relaxed">
+              <p className="text-slate-500 text-sm leading-relaxed">
                 {edu.detail}
               </p>
             </div>

@@ -9,9 +9,11 @@ export default function Contact() {
       id="contact"
       className="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800"
     >
-      <div className="mb-12 text-center md:text-left">
-        <h2 className="text-3xl font-bold text-teal-400 mb-2">Get in Touch</h2>
-        <p className="text-slate-400">
+      <div className="mb-12 text-center md:text-left section-ink">
+        <h2 className="text-4xl md:text-5xl font-black text-red-400 mb-4 uppercase tracking-[0.22em] section-heading">
+          Get in Touch
+        </h2>
+        <p className="text-slate-400 max-w-3xl leading-relaxed">
           Interested in collaborating or want to explore my potential further?
           Please feel free to contact me directly.
         </p>
@@ -19,7 +21,7 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
         <div className="md:col-span-2 space-y-6">
-          <h3 className="text-xl font-semibold text-slate-100">
+          <h3 className="text-2xl font-black text-slate-100 uppercase tracking-[0.18em] section-heading">
             Contact Information
           </h3>
           <p className="text-sm text-slate-400 leading-relaxed">
@@ -30,9 +32,9 @@ export default function Contact() {
           <div className="space-y-4 pt-2">
             <a
               href="mailto:email-stephenjm15@gmail.com"
-              className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
+              className="flex items-center gap-3 text-sm text-slate-300 hover:text-red-300 transition group"
             >
-              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
+              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-red-500/10 transition">
                 <IoMail className="w-4 h-4 text-[#EA4335] transition-transform group-hover:scale-110" />
               </span>
               stephenjm15@gmail.com
@@ -42,9 +44,9 @@ export default function Contact() {
               href="https://www.linkedin.com/in/stephen-joshua-manullang-37075832a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
+              className="flex items-center gap-3 text-sm text-slate-300 hover:text-red-300 transition group"
             >
-              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
+              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-red-500/10 transition">
                 <FaLinkedin className="w-4 h-4 text-[#0077B5] transition-transform group-hover:scale-110" />
               </span>
               LinkedIn Profile
@@ -54,9 +56,9 @@ export default function Contact() {
               href="https://github.com/stephen1234567890000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
+              className="flex items-center gap-3 text-sm text-slate-300 hover:text-red-300 transition group"
             >
-              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
+              <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-red-500/10 transition">
                 <SiGithub className="w-4 h-4 text-[#181717] transition-transform group-hover:scale-110" />
               </span>
               Github Profile
@@ -83,7 +85,7 @@ export default function Contact() {
                 id="name"
                 required
                 placeholder="Name"
-                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition"
+                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
               />
             </div>
 
@@ -100,7 +102,7 @@ export default function Contact() {
                 id="email"
                 required
                 placeholder="Email"
-                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition"
+                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
               />
             </div>
 
@@ -117,13 +119,13 @@ export default function Contact() {
                 required
                 placeholder="Your message here..."
                 rows="4"
-                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition"
+                className="w-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold text-sm py-3 rounded-lg transition shadow-lg shadow-teal-500/10 cursor-pointer"
+              className="w-full bg-red-500 hover:bg-red-600 text-slate-900 font-bold text-sm py-3 rounded-lg transition shadow-lg shadow-red-500/20 cursor-pointer"
             >
               Send Message
             </button>
