@@ -8,7 +8,7 @@ export default function Hero() {
         STEPHEN JOSHUA
       </h1>
       <p className="text-lg md:text-2xl max-w-3xl mb-10 text-slate-300 chaos-subtitle leading-relaxed">
-        Full Stack Software Engineer — architecting aggressive, dark, and experimental digital identities.
+        Full Stack Software Engineer
       </p>
       <div className="flex flex-wrap justify-center gap-4">
         <a href="#project" className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-red-500/20 tracking-[0.08em] uppercase">
