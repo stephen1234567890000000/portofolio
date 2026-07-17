@@ -1,6 +1,11 @@
+import SectionReveal from "./SectionReveal";
+import { IoMail } from "react-icons/io5";
+import { SiLinkedin, SiGithub } from "react-icons/si";
+import { FaLinkedin} from "react-icons/fa"; 
+
 export default function Contact() {
   return (
-    <section
+    <SectionReveal
       id="contact"
       className="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800"
     >
@@ -28,7 +33,7 @@ export default function Contact() {
               className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
             >
               <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
-                ✉
+                <IoMail className="w-4 h-4 text-[#EA4335] transition-transform group-hover:scale-110" />
               </span>
               stephenjm15@gmail.com
             </a>
@@ -40,7 +45,7 @@ export default function Contact() {
               className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
             >
               <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
-                🔗
+                <FaLinkedin className="w-4 h-4 text-[#0077B5] transition-transform group-hover:scale-110" />
               </span>
               LinkedIn Profile
             </a>
@@ -52,7 +57,7 @@ export default function Contact() {
               className="flex items-center gap-3 text-sm text-slate-300 hover:text-teal-400 transition group"
             >
               <span className="bg-slate-800 p-2 rounded-lg group-hover:bg-teal-500/10 transition">
-                💻
+                <SiGithub className="w-4 h-4 text-[#181717] transition-transform group-hover:scale-110" />
               </span>
               Github Profile
             </a>
@@ -125,6 +130,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </SectionReveal>
   );
 }

@@ -1,14 +1,82 @@
+import SectionReveal from "./SectionReveal";
+import { FaReact, FaNodeJs, FaBoxes } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiVite,
+  SiNextdotjs,
+  SiPostgresql,
+  SiSequelize,
+  SiAxios,
+  SiTypescript,
+  SiExpress,
+  SiNestjs,
+  SiMongodb,
+  SiGraphql,
+  SiVercel,
+  SiGoogle,
+} from "react-icons/si";
+import { TbPlugConnected } from "react-icons/tb";
+import { MdLanguage } from "react-icons/md";
+import { RiRobot2Line } from "react-icons/ri"; // Ikon Robot untuk Gemini AI
+
+function getTechIcon(techName) {
+  switch (techName) {
+    case "React.js":
+      return <FaReact className="text-[#61DAFB] w-3.5 h-3.5" />;
+    case "Tailwind CSS":
+      return <SiTailwindcss className="text-[#06B6D4] w-3.5 h-3.5" />;
+    case "Vite":
+      return <SiVite className="text-[#646CFF] w-3.5 h-3.5" />;
+    case "Node.js":
+      return <FaNodeJs className="text-[#5FA04E] w-3.5 h-3.5" />;
+    case "WebSocket":
+      return <TbPlugConnected className="text-[#38BDF8] w-3.5 h-3.5" />;
+    case "Zustand":
+      return <FaBoxes className="text-[#F59E0B] w-3.5 h-3.5" />;
+    case "i18n":
+      return <MdLanguage className="text-white w-3.5 h-3.5" />;
+    case "Express.js":
+      return <FaNodeJs className="text-white w-3.5 h-3.5" />;
+    case "PostgreSQL":
+      return <SiPostgresql className="text-[#4169E1] w-3.5 h-3.5" />;
+    case "Sequelize":
+      return <SiSequelize className="text-[#52B0E7] w-3.5 h-3.5" />;
+    case "Next.js":
+      return <SiNextdotjs className="text-white w-3.5 h-3.5" />;
+    case "Axios":
+      return <SiAxios className="text-[#5A29E4] w-3.5 h-3.5" />;
+    case "Google OAuth":
+      return <SiGoogle className="text-[#EA4335] w-3.5 h-3.5" />;
+    case "Google Gemini API":
+      return <RiRobot2Line className="text-[#9333EA] w-3.5 h-3.5" />;
+    case "MongoDB":
+      return <SiMongodb className="text-[#47A248] w-3.5 h-3.5" />;
+    case "GraphQL":
+      return <SiGraphql className="text-[#E10098] w-3.5 h-3.5" />;
+    case "Nest.js":
+      return <SiNestjs className="text-[#E0234E] w-3.5 h-3.5" />;
+    case "TypeScript":
+      return <SiTypescript className="text-[#3178C6] w-3.5 h-3.5" />;
+    case "Express.js":
+      return <SiExpress className="text-white w-3.5 h-3.5" />;
+    case "Vercel":
+      return <SiVercel className="text-white w-3.5 h-3.5" />;
+    default:
+      return <FaBoxes className="text-slate-400 w-3.5 h-3.5" />; // Ikon cadangan jika tech tidak terdaftar
+  }
+}
+
 export default function Project() {
   const projects = [
     {
       title: "PICKSIDE — Real-time Gaming Platform",
+      type: "Featured Capstone Project",
       tech: [
         "React.js",
         "Tailwind CSS",
         "Vite",
         "Node.js",
         "WebSocket",
-        "Zustand",
         "i18n",
       ],
       background:
@@ -23,12 +91,12 @@ export default function Project() {
     },
     {
       title: "FitBook",
+      type: "RevoU Faculty Project",
       tech: [
         "Node.js",
         "Express.js",
         "PostgreSQL",
         "Sequelize",
-        "REST API",
         "Next.js",
         "Tailwind CSS",
         "Axios",
@@ -49,16 +117,24 @@ export default function Project() {
     },
     {
       title: "Game Top-Up",
+      type: "Personal Project",
       tech: [
-        "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "REST API",
-        "React.js",
-        "Axios",
-        "Tailwind CSS",
-        "Google OAuth",
-        "Google Gemini API",
+        {
+          name: "React.js",
+          icon: <FaReact className="text-[#61DAFB] w-3.5 h-3.5" />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="text-[#06B6D4] w-3.5 h-3.5" />,
+        },
+        {
+          name: "Vite",
+          icon: <SiVite className="text-[#646CFF] w-3.5 h-3.5" />,
+        },
+        {
+          name: "Node.js",
+          icon: <FaNodeJs className="text-[#5FA04E] w-3.5 h-3.5" />,
+        },
       ],
       background:
         "Proses pembelian item atau voucher game sering kali dilakukan melalui berbagai platform yang memiliki alur transaksi berbeda-beda, sehingga pengguna membutuhkan platform yang menyediakan pengalaman top-up yang lebih sederhana, cepat, dan terintegrasi dalam satu aplikasi.",
@@ -73,11 +149,11 @@ export default function Project() {
     },
     {
       title: "Job Portal",
+      type: "Personal Project",
       tech: [
         "Node.js",
         "Express.js",
         "PostgreSQL",
-        "REST API",
         "React.js",
         "Tailwind CSS",
         "Axios",
@@ -95,7 +171,7 @@ export default function Project() {
   ];
 
   return (
-    <section
+    <SectionReveal
       id="project"
       className="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800"
     >
@@ -104,7 +180,8 @@ export default function Project() {
           Selected Projects
         </h2>
         <p className="text-slate-400">
-          Showcasing my best work that demonstrates my technical execution skills.
+          Showcasing my best work that demonstrates my technical execution
+          skills.
         </p>
       </div>
 
@@ -113,11 +190,14 @@ export default function Project() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-teal-500/30 transition-all duration-300 shadow-xl"
+            className="glass p-10 rounded-3xl border border-slate-800 hover-glow transition-all duration-300 shadow-2xl animate-fade-up"
           >
             {/* Top section: Project title & button */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-              <h3 className="text-2xl font-bold text-slate-100 tracking-tight">
+              <span className="inline-block text-[10px] font-bold tracking-widest uppercase bg-teal-500/10 text-teal-400 px-2 py-0.5 rounded border border-teal-500/20 mb-2">
+                {project.type}
+              </span>
+              <h3 className="text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight">
                 {project.title}
               </h3>
               <div className="flex gap-3">
@@ -131,15 +211,22 @@ export default function Project() {
             </div>
 
             {/* Second section: Tech stack badges */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tech.map((t, idx) => (
-                <span
-                  key={idx}
-                  className="bg-slate-800/80 text-teal-300 text-xs px-3 py-1 rounded-md border border-slate-700/60 font-medium"
-                >
-                  {t}
-                </span>
-              ))}
+            <div className="flex flex-wrap gap-3 mb-8">
+              {project.tech.map((t, idx) => {
+                const techName = typeof t === "string" ? t : t.name;
+                const techIcon =
+                  typeof t === "string" ? getTechIcon(t) : t.icon;
+
+                return (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center gap-2 bg-slate-800/70 text-teal-300 text-sm px-4 py-1.5 rounded-full border border-slate-700/50 font-semibold"
+                  >
+                    {techIcon}
+                    {techName}
+                  </span>
+                );
+              })}
             </div>
 
             {/* Third section: Structured narrative for HR readability */}
@@ -172,6 +259,6 @@ export default function Project() {
           </div>
         ))}
       </div>
-    </section>
+    </SectionReveal>
   );
 }

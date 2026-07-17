@@ -1,3 +1,5 @@
+import SectionReveal from "./SectionReveal";
+
 export default function Experience() {
   const workExperiences = [
     {
@@ -27,7 +29,7 @@ export default function Experience() {
   ];
 
   return (
-    <section
+    <SectionReveal
       id="experience"
       className="py-20 px-6 max-w-3xl mx-auto border-t border-slate-800"
     >
@@ -92,6 +94,6 @@ export default function Experience() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionReveal>
   );
 }
