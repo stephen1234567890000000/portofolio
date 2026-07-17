@@ -189,8 +189,14 @@ export default function Project() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="glass chaos-card p-10 rounded-3xl border border-red-800/40 hover-glow transition-all duration-300 shadow-2xl animate-fade-up"
+            className="relative glass chaos-card broken-frame p-10 rounded-3xl border border-red-800/40 hover-glow transition-all duration-300 shadow-2xl animate-fade-up overflow-hidden"
           >
+            <span className="absolute inset-0 noise-overlay pointer-events-none" />
+            <span className="absolute inset-0 scanline-overlay pointer-events-none" />
+            <span className="absolute top-4 left-4 w-16 h-1 bg-red-500/30 rotate-[-10deg]" />
+            <span className="absolute bottom-6 right-6 w-12 h-1 bg-red-500/25 rotate-[15deg]" />
+            <span className="absolute top-10 right-6 w-1 h-16 bg-red-500/15" />
+            <span className="absolute left-8 bottom-16 w-24 h-1 bg-red-500/20 rotate-[8deg]" />
             {/* Top section: Project title & button */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
               <span className="inline-block text-[10px] font-bold tracking-widest uppercase chaos-badge text-red-200 px-2 py-0.5 rounded border border-red-500/20 mb-2">
@@ -211,7 +217,9 @@ export default function Project() {
 
             {/* Second section: Tech stack badges */}
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="absolute -top-6 left-0 text-xs uppercase tracking-[0.3em] text-red-500/80">chaos UI</span>
+              <span className="absolute -top-6 left-0 text-xs uppercase tracking-[0.3em] text-red-500/80">
+                chaos UI
+              </span>
               {project.tech.map((t, idx) => {
                 const techName = typeof t === "string" ? t : t.name;
                 const techIcon =
